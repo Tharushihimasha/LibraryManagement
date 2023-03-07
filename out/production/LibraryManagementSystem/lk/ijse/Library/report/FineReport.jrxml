@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FineReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad9873e1-89e2-4bfe-abff-a30d9dc7d947">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="memberName" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="month" class="java.lang.String"/>
+	<field name="year" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="40" width="138" height="30" uuid="0ff9802f-3cea-4589-a345-26fc8bee3069"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fine  Report]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="391" y="1" width="100" height="30" uuid="9c554b2b-d675-4147-967c-ce1816d855f2"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="390" y="20" width="100" height="30" uuid="5d485425-f689-47f8-86f3-bbcca5db5d53"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="15" width="120" height="30" uuid="6482388f-1664-4417-b530-21a370a57468"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Member Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="15" width="120" height="30" uuid="0244c767-2400-4d42-97bc-1c3d4329c9db"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="15" width="100" height="30" uuid="a7f92306-2f0f-46ea-aa0d-11b191aad5ab"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="15" width="100" height="30" uuid="4a94293d-9e6c-4a3d-811f-a929a20e85be"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="10" width="100" height="30" uuid="160c159f-10ad-4d83-ab10-5762baa254d9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c29ebfd6-8eff-4fdc-afd5-5f7e26b31ef4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{memberName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="11" width="100" height="30" uuid="43043a70-2fc7-4364-869b-93e314737692">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="565e3070-d2d9-4efc-b41e-8b1bc121a6e0"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="11" width="100" height="30" uuid="10de440a-68ec-454a-b6c0-df47f95f9879">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b364bbc-b3df-4ade-9354-b2e339ed46e3"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="10" width="100" height="30" uuid="8c042923-1d0c-48a2-8247-1c514707317a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="191142a0-7ad4-4a09-b183-7cdbaf3af331"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="685.0" prefWidth="1227.0" style="-fx-background-color: #7f8c8d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Library.controller.EmployeeSalaryController">
+   <children>
+      <Label layoutX="479.0" layoutY="25.0" prefHeight="36.0" prefWidth="334.0" text="Manage Employee  Salary" textFill="#721717">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="464.0" layoutY="61.0" prefHeight="5.0" prefWidth="340.0" />
+      <ImageView fitHeight="144.0" fitWidth="152.0" layoutX="170.0" layoutY="177.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/img_30.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="448.0" layoutY="172.0" prefHeight="5.0" prefWidth="92.0" text="Employee Id" textFill="#fff1f1">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmployeeId" layoutX="607.0" layoutY="167.0" onAction="#EmployeeIdOnAction" prefHeight="31.0" prefWidth="206.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Label layoutX="446.0" layoutY="228.0" text="Amount" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="292.0" text="Salary Date" textFill="#fff6f6">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="886.0" layoutY="141.0" onAction="#EmployeeSalarySearchOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #bbad09;" text="Search" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="886.0" layoutY="202.0" onAction="#EmployeeSalaryAddOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #063082;" text="Add" textFill="#eaeeea">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="886.0" layoutY="257.0" onAction="#EmployeeSalaryUpdateOnAction" style="-fx-background-color: #0e8206;" text="Update" textFill="#f4f4f5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="886.0" layoutY="314.0" onAction="#EmployeeSalaryDeleteOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #820909;" text="Delete" textFill="#e8e5e4">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblEmployeeSalary" layoutX="154.0" layoutY="405.0" prefHeight="251.0" prefWidth="892.0" style="-fx-background-color: #bdc3c7;">
+         <columns>
+            <TableColumn fx:id="clmEmployeeId" prefWidth="222.0" text="Employee Id" />
+            <TableColumn fx:id="clmAmont" prefWidth="374.0" text="Amont" />
+            <TableColumn fx:id="clmDate" prefWidth="295.0" text="Salary Date" />
+         </columns>
+      </TableView>
+      <JFXDatePicker fx:id="txtDate" layoutX="606.0" layoutY="287.0" prefHeight="31.0" prefWidth="212.0" style="-fx-background-color: #bdc3c7;" />
+      <JFXTextField fx:id="txtAmont" layoutX="607.0" layoutY="234.0" onAction="#AmontOnAction" prefHeight="31.0" prefWidth="206.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXTextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Expenture" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bdfdf733-9648-421f-94d7-f3227a735fd8">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySqlDB"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="Invoice_Number" class="java.lang.String"/>
+	<field name="Expenture_Description" class="java.lang.String"/>
+	<field name="Expenture_Date" class="java.lang.String"/>
+	<field name="Expenture_Payment" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="10" width="175" height="30" uuid="f72fff79-9ae8-4ac4-b8d3-5e50c3c8a691"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expenture Report]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="445" y="0" width="100" height="30" uuid="abff9701-406d-4021-be09-f970dbf89f68"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="233" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="140" height="30" uuid="0c9c7b22-1774-4831-9054-2b3d1432233f"/>
+				<textElement>
+					<font size="16" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[InVoice  Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="70" width="110" height="30" uuid="8466c285-9463-45e3-b6a4-c3b1f65f1cdd"/>
+				<textElement>
+					<font size="16" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="130" width="100" height="30" uuid="a57fb0e1-aae9-4807-9e5e-81561f1c03f4"/>
+				<textElement>
+					<font size="16" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="190" width="100" height="30" uuid="dd3b2762-9ede-43b5-85b2-24968d2301d9"/>
+				<textElement>
+					<font size="16" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Payment]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="30" uuid="abea7c7a-ebda-43bf-8a6d-7d94910e9a2f"/>
+				<textFieldExpression><![CDATA[$F{Invoice_Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="70" width="100" height="30" uuid="a3abde06-99b6-4a04-ab5c-412593180151"/>
+				<textFieldExpression><![CDATA[$F{Expenture_Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="130" width="100" height="30" uuid="9c57c846-c443-49b6-bca1-6dced27be4a7"/>
+				<textFieldExpression><![CDATA[$F{Expenture_Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="190" width="100" height="30" uuid="ea19a328-7e19-4cdc-985d-b5422c2175eb"/>
+				<textFieldExpression><![CDATA[$F{Expenture_Payment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

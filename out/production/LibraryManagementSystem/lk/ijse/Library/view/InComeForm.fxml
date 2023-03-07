@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="685.0" prefWidth="1227.0" style="-fx-background-color: #ced6e0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Library.controller.InComeFormController">
+   <children>
+      <Label layoutX="494.0" layoutY="24.0" prefHeight="40.0" prefWidth="185.0" text="InCome Form" textFill="#8d130f">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <StackedBarChart fx:id="stackedBarChart" layoutX="33.0" layoutY="169.0" prefHeight="410.0" prefWidth="867.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+      <ImageView fitHeight="150.0" fitWidth="241.0" layoutX="944.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img_38.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="996.0" layoutY="572.0" onAction="#PrintOnAction" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: #006266;" text="Print" textFill="#f8f0f0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

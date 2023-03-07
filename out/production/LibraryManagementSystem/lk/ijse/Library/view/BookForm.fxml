@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="685.0" prefWidth="1227.0" style="-fx-background-color: #7f8c8d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Library.controller.BookFormController">
+   <children>
+      <Label layoutX="218.0" layoutY="136.0" prefHeight="21.0" prefWidth="92.0" text="Book Id" textFill="#fff1f1">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtBookId" layoutX="345.0" layoutY="131.0" onAction="#BookIdOnAction" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Label layoutX="216.0" layoutY="188.0" prefHeight="21.0" prefWidth="97.0" text="Book Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtBookName" layoutX="345.0" layoutY="183.0" onAction="#BookNameOnAction" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Label layoutX="218.0" layoutY="240.0" text="Book Category" textFill="#fff6f6">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtBookCategary" layoutX="345.0" layoutY="235.0" onAction="#BookCategoryOnAction" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtBookISBM" layoutX="345.0" layoutY="292.0" onAction="#BookISBMOnAction" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <JFXButton layoutX="1084.0" layoutY="183.0" onAction="#BookAddOnAction" prefHeight="31.0" prefWidth="104.0" style="-fx-background-color: #063082;" text="Add" textFill="#eaeeea">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="1088.0" layoutY="235.0" onAction="#BookUpdateOnAction" prefHeight="31.0" prefWidth="97.0" style="-fx-background-color: #0e8206;" text="Update" textFill="#f4f4f5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="1085.0" layoutY="292.0" onAction="#BookDeleteOnAction" prefHeight="31.0" prefWidth="104.0" style="-fx-background-color: #820909;" text="Delete" textFill="#e8e5e4">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="1085.0" layoutY="131.0" onAction="#BookSearchOnAction" prefHeight="31.0" prefWidth="97.0" style="-fx-background-color: #bbad09;" text="Search" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblBook" layoutX="16.0" layoutY="379.0" prefHeight="292.0" prefWidth="1197.0" style="-fx-background-color: #bdc3c7;">
+        <columns>
+          <TableColumn fx:id="clmBookId" prefWidth="100.0" text="Book Id" />
+          <TableColumn fx:id="clmBookName" prefWidth="167.0" text="Book Name" />
+            <TableColumn fx:id="clmBookCategory" prefWidth="171.0" text="Book Categary" />
+            <TableColumn fx:id="clmBookISBM" prefWidth="186.0" text="Book ISBM" />
+            <TableColumn fx:id="clmBookAuthor" prefWidth="194.0" text="Book Author" />
+            <TableColumn fx:id="clmBookPrice" prefWidth="131.0" text="Book Price" />
+            <TableColumn fx:id="clmBookShelf" prefWidth="135.0" text="Book Shelf" />
+            <TableColumn fx:id="clmOrderId" prefWidth="135.0" text="Order Id " />
+        </columns>
+      </TableView>
+      <Label layoutX="553.0" layoutY="23.0" prefHeight="40.0" prefWidth="197.0" text="Manage Book" textFill="#6b1717">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="513.0" layoutY="61.0" prefHeight="4.0" prefWidth="263.0" />
+      <ImageView fitHeight="104.0" fitWidth="92.0" layoutX="44.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img_35.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtBookAuthor" layoutX="778.0" layoutY="131.0" onAction="#BookAuthorOnAction" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtBookShelf" layoutX="778.0" layoutY="235.0" onAction="#BookShelfOnAction" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtOderId" layoutX="778.0" layoutY="292.0" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Label layoutX="216.0" layoutY="303.0" text="Book ISBM " textFill="#ebe3e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="629.0" layoutY="136.0" text="Book Author" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="631.0" layoutY="188.0" text="Book Price" textFill="#ebe3e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="630.0" layoutY="240.0" text="Book Shelf" textFill="#e8e2e2">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="631.0" layoutY="293.0" text="Order Id" textFill="#eee8e8">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBookPrice" layoutX="778.0" layoutY="183.0" onAction="#BookPriceOnAction" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #bdc3c7;" />
+   </children>
+</AnchorPane>
