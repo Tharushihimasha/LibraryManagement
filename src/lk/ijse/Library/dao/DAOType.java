@@ -1,0 +1,6 @@
+package lk.ijse.Library.dao;
+
+public enum DAOType {
+    MEMBER,BOOK,BOOKRECORD,DONATION,EMPLOYEE,EMPLOYEESALARY,EXPENTURE,ODER,FINE
+
+}

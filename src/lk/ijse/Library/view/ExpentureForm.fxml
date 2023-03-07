@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="685.0" prefWidth="1227.0" style="-fx-background-color: #7f8c8d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Library.controller.ExpentureFormController">
+   <children>
+      <Label layoutX="299.0" layoutY="270.0" text="Description" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="299.0" layoutY="187.0" prefHeight="10.0" prefWidth="113.0" text="Invoice Number" textFill="#fff7f7">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtInvoiceNumber" layoutX="445.0" layoutY="182.0" onAction="#invoiceNumberOnAction" prefHeight="31.0" prefWidth="205.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Label layoutX="792.0" layoutY="270.0" prefHeight="21.0" prefWidth="83.0" text="Payment" textFill="#f5eded">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="792.0" layoutY="187.0" prefHeight="10.0" prefWidth="113.0" text="Date" textFill="#fff6f6">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtExpentureDate" layoutX="932.0" layoutY="182.0" onAction="#DateOnAction" prefHeight="31.0" prefWidth="205.0" style="-fx-background-color: #bdc3c7;" />
+      <Label layoutX="526.0" layoutY="35.0" prefHeight="36.0" prefWidth="248.0" text="Manage Expenture" textFill="#5e0a0a">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="504.0" layoutY="71.0" prefHeight="5.0" prefWidth="273.0" />
+      <TableView fx:id="tblExpenture" layoutX="33.0" layoutY="385.0" prefHeight="285.0" prefWidth="1162.0" style="-fx-background-color: #bdc3c7;">
+         <columns>
+            <TableColumn fx:id="clmInvoiceNumber" minWidth="0.0" prefWidth="254.0" text="Invoice Number" />
+            <TableColumn fx:id="clmDescription" prefWidth="358.0" text="Description" />
+            <TableColumn fx:id="clmDate" prefWidth="271.0" text="Date" />
+            <TableColumn fx:id="clmPayment" prefWidth="278.0" text="Payment" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="496.0" layoutY="327.0" onAction="#expenAddOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #063082;" text="Add" textFill="#eaeeea">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="720.0" layoutY="327.0" onAction="#expenUpdateOnAction" style="-fx-background-color: #0e8206;" text="Update" textFill="#f4f4f5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="982.0" layoutY="327.0" onAction="#expenDeleteOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #820909;" text="Delete" textFill="#e8e5e4">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="678.0" layoutY="182.0" onAction="#expenSearchOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #bbad09;" text="Search" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="39.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img_2.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="24.0" layoutY="20.0" onAction="#PrintRepordOnAction" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: #079992;" text="Print Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="txtPayment" layoutX="934.0" layoutY="265.0" onKeyReleased="#txtOnKeyContact" prefHeight="31.0" prefWidth="205.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtDescription" layoutX="444.0" layoutY="265.0" onAction="#DescriptionOnAction" prefHeight="31.0" prefWidth="205.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXTextField>
+   </children>
+</AnchorPane>

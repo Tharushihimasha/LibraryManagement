@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="685.0" prefWidth="1227.0" style="-fx-background-color: #7f8c8d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Library.controller.EmployeeFormController">
+   <children>
+      <ImageView fitHeight="140.0" fitWidth="135.0" layoutX="81.0" layoutY="168.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/img_19.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="292.0" layoutY="151.0" prefHeight="5.0" prefWidth="92.0" text="Employee Id" textFill="#fff1f1">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtEmployeeId" layoutX="463.0" layoutY="146.0" onAction="#EmIdOnAction" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Label layoutX="289.0" layoutY="207.0" text="Employee Nic" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtEmployeeNic" layoutX="463.0" layoutY="202.0" onAction="#NicOnAction" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Label layoutX="289.0" layoutY="271.0" text="Employee Name" textFill="#fff6f6">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtEmployeeName" layoutX="463.0" layoutY="262.0" onAction="#NameOnAction" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Label layoutX="24.0" layoutY="381.0" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtAddress" layoutX="945.0" layoutY="153.0" onAction="#AddressOnAction" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <JFXButton layoutX="484.0" layoutY="327.0" onAction="#EmployeeAddOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #063082;" text="Add" textFill="#eaeeea">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="698.0" layoutY="327.0" onAction="#EmployeeUpdateOnAction" style="-fx-background-color: #0e8206;" text="Update" textFill="#f4f4f5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="954.0" layoutY="327.0" onAction="#EmployeeDeleteOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #820909;" text="Delete" textFill="#e8e5e4">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="698.0" layoutY="153.0" onAction="#EmployeeSearchOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #bbad09;" text="Search" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblEmployee" layoutX="11.0" layoutY="402.0" prefHeight="263.0" prefWidth="1205.0" style="-fx-background-color: #bdc3c7;">
+        <columns>
+          <TableColumn fx:id="clmEmployeeId" prefWidth="155.0" text="Employee Id" />
+            <TableColumn fx:id="clmEmployeeNic" prefWidth="226.0" text="Employee Nic" />
+          <TableColumn fx:id="clmEmployeeName" prefWidth="184.0" text="Employee Name" />
+            <TableColumn fx:id="clmAddress" prefWidth="213.0" text="Address" />
+            <TableColumn fx:id="clmContact" prefWidth="214.0" text="Contact" />
+            <TableColumn fx:id="clmSalary" prefWidth="212.0" text="Salary" />
+        </columns>
+      </TableView>
+      <Label layoutX="506.0" layoutY="15.0" prefHeight="36.0" prefWidth="232.0" text="Manage Employee" textFill="#5e1212">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="484.0" layoutY="51.0" prefHeight="5.0" prefWidth="273.0" />
+      <Label layoutX="820.0" layoutY="158.0" text=" Address" textFill="#fff6f6">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="823.0" layoutY="207.0" text="Contact" textFill="#fff6f6">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="829.0" layoutY="271.0" text="Salary" textFill="#fff7f7">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSalary" layoutX="945.0" layoutY="266.0" onAction="#SalaryOnAction" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <JFXTextField fx:id="txtContact" layoutX="948.0" layoutY="202.0" onAction="#ContactOnAction" onKeyReleased="#txtOnKeyContact" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXTextField>
+   </children>
+</AnchorPane>

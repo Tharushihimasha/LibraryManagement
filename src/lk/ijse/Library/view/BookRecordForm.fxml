@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="685.0" prefWidth="1227.0" style="-fx-background-color: #7f8c8d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Library.controller.BookRecordFormController">
+   <children>
+      <Label layoutX="471.0" layoutY="48.0" prefHeight="40.0" prefWidth="329.0" text="     Manage Book_Record" textFill="#5e0a0a">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="471.0" layoutY="87.0" prefHeight="8.0" prefWidth="346.0" />
+      <ImageView fitHeight="146.0" fitWidth="157.0" layoutX="89.0" layoutY="148.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/img_18.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="304.0" layoutY="151.0" prefHeight="21.0" prefWidth="108.0" text="BookRecord Id" textFill="#fff1f1">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookRecordId" layoutX="433.0" layoutY="146.0" onAction="#RecordIdOnAction" prefHeight="31.0" prefWidth="250.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Label layoutX="304.0" layoutY="202.0" prefHeight="21.0" prefWidth="92.0" text="Member Id" textFill="#fff1f1">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMemberId" layoutX="433.0" layoutY="197.0" onAction="#MemberIdOnAction" prefHeight="31.0" prefWidth="250.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtBookId" layoutX="433.0" layoutY="254.0" onAction="#BookIdOnAction" prefHeight="31.0" prefWidth="250.0" style="-fx-background-color: #bdc3c7;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Label layoutX="304.0" layoutY="259.0" prefHeight="21.0" prefWidth="92.0" text="Book Id" textFill="#fff1f1">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="820.0" layoutY="151.0" text="Issue Date" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtIssueDate" layoutX="940.0" layoutY="146.0" onAction="#IssueDateOnAction" prefHeight="31.0" prefWidth="250.0" style="-fx-background-color: #bdc3c7;" />
+      <DatePicker fx:id="txtReturnDate" layoutX="940.0" layoutY="197.0" onAction="#ReturnDateOnAction" prefHeight="31.0" prefWidth="250.0" style="-fx-background-color: #bdc3c7;" />
+      <Label layoutX="820.0" layoutY="202.0" text="Return Date" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="819.0" layoutY="259.0" text="States" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbStutes" layoutX="940.0" layoutY="254.0" prefHeight="31.0" prefWidth="250.0" style="-jfx-focus-color: #bdc3c7;" />
+      <JFXButton layoutX="710.0" layoutY="146.0" onAction="#RecordSearchOnAction" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #bbad09;" text="Search" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="507.0" layoutY="317.0" onAction="#AddRecordOnAction" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #063082;" text="Add" textFill="#eaeeea">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="718.0" layoutY="317.0" onAction="#RecordUpdateOnAction" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #0e8206;" text="Update" textFill="#f4f4f5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="940.0" layoutY="317.0" onAction="#RecordDeleteOnAction" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #820909;" text="Delete" textFill="#e8e5e4">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblBookRecord" layoutX="16.0" layoutY="381.0" prefHeight="295.0" prefWidth="1202.0" style="-fx-background-color: #bdc3c7;">
+         <columns>
+            <TableColumn fx:id="clmBookRecordId" prefWidth="173.0" text="BookRecord Id" />
+            <TableColumn fx:id="clmMemberId" prefWidth="194.0" text="Member Id" />
+            <TableColumn fx:id="clmBookId" prefWidth="186.0" text="Book Id" />
+            <TableColumn fx:id="clmIssuedDate" prefWidth="237.0" text="Issue Date" />
+            <TableColumn fx:id="clmReturnDate" prefWidth="186.0" text="Return Date" />
+            <TableColumn fx:id="clmStatus" prefWidth="225.0" text="Status" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

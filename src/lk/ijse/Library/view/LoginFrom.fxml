@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="703.0" prefWidth="1079.0" style="-fx-background-color: #57606f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Library.controller.LoginFromController">
+   <children>
+      <AnchorPane prefHeight="703.0" prefWidth="1079.0" style="-fx-background-color: #57606f;">
+         <children>
+            <AnchorPane layoutX="98.0" layoutY="65.0" prefHeight="574.0" prefWidth="766.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="26.0" layoutY="27.0" prefHeight="30.0" prefWidth="78.0" text="Hello !">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="57.0" prefHeight="30.0" prefWidth="162.0" text="Welocme to Back">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="100.0" fitWidth="128.0" layoutX="183.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img_34.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="txtUserName" layoutX="140.0" layoutY="275.0" onAction="#UserOnAction" prefHeight="31.0" prefWidth="225.0" promptText="                  User Name" style="-fx-background-color: white;" />
+                  <ImageView fitHeight="314.0" fitWidth="454.0" layoutX="431.0" layoutY="96.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../assets/img_42.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="708.0" layoutY="529.0" prefHeight="31.0" prefWidth="203.0" text="Library  Mangment  System">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="69.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img_14.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="39.0" fitWidth="37.0" layoutX="69.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img_44.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="283.0" layoutY="421.0" onAction="#loginOnAction" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: #ced6e0;" text="Login">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXPasswordField fx:id="txtPassword" layoutX="140.0" layoutY="354.0" prefHeight="31.0" prefWidth="225.0" promptText="                   Password" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
